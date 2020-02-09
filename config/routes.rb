@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'demo/index'
+
   mount Ckeditor::Engine => "/ckeditor"
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 
@@ -43,4 +45,5 @@ Rails.application.routes.draw do
 
   # Static pages
   resources :pages, path: "/", only: [:show]
+  get "demo" => "demo#index"
 end

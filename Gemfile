@@ -105,5 +105,7 @@ group :development do
   gem "scss_lint", "~> 0.55.0", require: false
   gem "web-console", "~> 3.3.0"
 end
+gem 'rails_12factor', group: :production
+
 
 eval_gemfile "./Gemfile_custom"
